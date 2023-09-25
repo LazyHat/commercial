@@ -1,0 +1,32 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        core_v = "1.10.1"
+        kotlin_bom_v = "1.8.0"
+        compose_bom_v = '2023.06.00'
+        compose_v = "1.7.2"
+        accompanist_v = "0.31.3-beta"
+        nav_v = "2.7.0-beta01"
+        lifecycle_v = "2.6.1"
+        room_v = "2.5.1"
+        dagger_v = "2.46.1"
+        hilt_v = "1.0.0"
+        kotlin_v = "1.8.21"
+        work_v = "2.8.1"
+        gradle_v = "8.0.2"
+        datastore_v = "1.0.0"
+        serialization_v = "1.5.0"
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_v"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_v"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$dagger_v"
+    }
+}
+plugins {
+    id 'com.android.application' version '8.0.2' apply false
+    id 'com.android.library' version "$gradle_v" apply false
+    id 'org.jetbrains.kotlin.android' version "$kotlin_v" apply false
+    id 'com.google.dagger.hilt.android' version "$dagger_v" apply false
+}

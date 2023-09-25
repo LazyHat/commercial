@@ -1,0 +1,90 @@
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.plugin.serialization'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+}
+
+android {
+    namespace 'ru.lazyhat.work.activitytracker'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "ru.lazyhat.work.activitytracker"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility java_v
+        targetCompatibility java_v
+    }
+    kotlinOptions {
+        jvmTarget = java_v.toString()
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_compiler_v
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    implementation "androidx.core:core-ktx:$core_v"
+    //LifeCycle
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_v"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_v"
+    implementation "androidx.lifecycle:lifecycle-runtime-compose:$lifecycle_v"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_v"
+    //Bom
+    //implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.0')
+    implementation platform("androidx.compose:compose-bom:$compose_bom_v")
+    //UI
+    implementation "androidx.activity:activity-compose:$activity_compose_v"
+    implementation "androidx.compose.ui:ui"
+    implementation "androidx.compose.ui:ui-tooling-preview"
+    implementation "androidx.compose.material3:material3"
+    implementation "androidx.navigation:navigation-compose:$nav_v"
+    //Dagger
+    implementation "com.google.dagger:dagger:$dagger_v"
+    kapt "com.google.dagger:dagger-compiler:$dagger_v"
+    //Hilt
+    kapt "com.google.dagger:hilt-android-compiler:$dagger_v"
+    implementation "com.google.dagger:hilt-android:$dagger_v"
+    implementation "androidx.hilt:hilt-navigation-compose:$hilt_v"
+    kapt "androidx.hilt:hilt-compiler:$hilt_v"
+    //Serialization
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:$serialization_v"
+    //DataStore
+    implementation "androidx.datastore:datastore:$datastore_v"
+    //Worker
+    //Tests
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation platform('androidx.compose:compose-bom:2022.10.00')
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'
+}

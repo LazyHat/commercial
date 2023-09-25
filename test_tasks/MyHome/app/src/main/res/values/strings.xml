@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Home</string>
+    <string-array name="main_screen_tabs">
+        <item>Камеры</item>
+        <item>Двери</item>
+    </string-array>
+</resources>

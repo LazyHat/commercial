@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">EATS</string>
+    <string name="page_home_label">Главная</string>
+    <string name="page_recs_label">Рекомендации</string>
+    <string name="page_water_label">Вода</string>
+    <string name="page_user_label">Пользователь</string>
+    <string name="breakfast">Завтрак</string>
+    <string name="lunch">Обед</string>
+    <string name="dinner">Ужин</string>
+    <string name="snack">Перекус</string>
+    <string name="eat">Еда</string>
+    <string name="minimal_activeness_explain">Сидячая работа, отсутствие спорта</string>
+    <string name="low_activeness_explain">Частая ходьба, или тренировки 20 минут, 1–2 раза в неделю</string>
+    <string name="medium_activeness_explain">Интенсивные тренировки до 60 минут, 3–4 раза в неделю</string>
+    <string name="hard_activeness_explain">Занятия спортом 5–7 раз в неделю или работа, связанная с физ. активностью</string>
+    <string name="extreme_activeness_explain">Ежедневные занятия спортом, очень трудоёмкая работа</string>
+</resources>

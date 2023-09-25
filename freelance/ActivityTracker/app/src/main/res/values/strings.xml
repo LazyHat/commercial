@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Контроль неподвижности</string>
+    <string name="main_title">Главная</string>
+    <string name="contacts_title">Контакты</string>
+</resources>
